@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <title>HOME</title>
+  </head>
+  <body>
+    <h1>Selamat Datang di devSember!<h1>
+
+
+      {% for berita in beritas %}
+        <h1><a href="/{{ berita.id }}">{{ berita.judul }}</a></h1>
+        <i> {{ berita.tanggal }} - {{ berita.kategori }}</i>
+        <hr>
+      {% endfor %}
+      <a href="/biodata"> Biodata </a>
+  </body>
+</html>

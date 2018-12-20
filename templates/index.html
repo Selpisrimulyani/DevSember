@@ -1,0 +1,39 @@
+{% include "header.html" %}
+  <body>
+
+  {% include "navigation.html" %}
+
+    {% include "page-header-index.html" %}
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          {% for berita in beritas %}
+          <div class="post-preview">
+            <a href="/{{ berita.id }}">
+              <h2 class="/{{ berita.id }}">
+                {{ berita.judul }}
+              </h2>
+            </a>
+            <p class="post-meta">Posted by
+              <a href="#">Start Bootstrap</a>
+              on {{ berita.tanggal}}</p>
+          </div>
+          <hr>
+          {% endfor %}
+          <!-- Pager -->
+          <div class="clearfix">
+            <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+
+  {% include "footer.html" %}
+
+    {% include "js.html" %}
+  </body>
+
+</html>

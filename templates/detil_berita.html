@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> {{ berita.judul }}</title>
+  </head>
+  <body>
+    <h1>{{ berita.judul |upper }}</h1>
+    <i>{{ berita.tanggal |date:"d F Y" }} - {{ berita.kategori.nama }}</i>
+    <p>
+  {{ berita.konten }}
+  </p>
+  </body>
+</html>
